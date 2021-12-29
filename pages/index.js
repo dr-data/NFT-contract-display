@@ -1,3 +1,11 @@
+// need to add 
+// https://chakra-ui.com/guides/getting-started/nextjs-guide
+
+// Sorting the json
+// https://stackoverflow.com/questions/47998188/how-to-sort-an-object-alphabetically-within-an-array-in-react-js/47998260
+
+// https://egghead.io/lessons/react-fetch-data-from-an-api-on-the-server-side-with-getserversideprops-in-next-js
+
 import React, { useState, useEffect } from 'react';
 export default function Home() {
   const [error, setError] = useState(null);
@@ -36,14 +44,17 @@ if (error) {
   } else {
     return (
       <div>
+
         {photos.map(item => (
           <div>
-            <div>
-              <img src={item.cached_file_url} width='350px' height='180px' />
-            </div>
-            <div>
-              <a href={opensea_link+item.token_id} target="_blank">{item.metadata.name}</a>
-            </div>
+            <a href={opensea_link+item.token_id} target="_blank">
+              <div>
+                <img src={item.cached_file_url} width='350px' height='180px' />
+              </div>
+              <div>
+                {item.metadata.name}
+              </div>
+            </a>
           </div>
         ))}
       </div>

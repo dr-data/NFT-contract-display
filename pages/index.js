@@ -3,10 +3,14 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [photos, setPhotos] = useState([]); 
+
+  const contract_address = "0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707";
+  
+  const opensea_link = "https://opensea.io/assets/matic/"+contract_address+"/";
   
   useEffect(() => {
     // fetch("https://api.nftport.xyz/v0/nfts/0xD4b3f1c0C67a493477F1eBc5d04c12eB4de168FE?chain=polygon&include=metadata", {
-      fetch("https://api.nftport.xyz/v0/nfts/0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707?chain=polygon&include=metadata", {
+      fetch("https://api.nftport.xyz/v0/nfts/"+ contract_address +"?chain=polygon&include=metadata", {
           "method": "GET",
           "headers": {
             "Content-Type": "application/json",
@@ -38,7 +42,7 @@ if (error) {
               <img src={item.cached_file_url} width='350px' height='180px' />
             </div>
             <div>
-              <a href={item.link} target="_blank">{item.metadata.name}</a>
+              <a href={opensea_link+item.token_id} target="_blank">{item.metadata.name}</a>
             </div>
           </div>
         ))}

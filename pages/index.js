@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image'
+
 export default function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -38,9 +40,9 @@ if (error) {
       <div>
         {photos.map((item, index) => (
           <div key={index}>
-            <a href={opensea_link+item.token_id}  target="_blank">
+            <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
               <div>
-                <img src={item.cached_file_url} width='350px' height='180px' />
+                <Image src={item.cached_file_url} width='350px' height='180px' />
               </div>
               <div>
                 {item.metadata.name}

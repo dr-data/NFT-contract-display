@@ -37,6 +37,7 @@ if (error) {
     return <div>Loading...</div>;
   } else {
     return (
+      
       <div>
         {photos.map((item, index) => (
           <div key={index}>

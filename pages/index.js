@@ -44,7 +44,6 @@ if (error) {
   } else {
     return (
       <div>
-
         {photos.map((item, index) => (
           <div>
             <a href={opensea_link+item.token_id} key={index} target="_blank">

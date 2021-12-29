@@ -42,7 +42,7 @@ if (error) {
           <div key={index}>
             <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
               <div>
-                <Image src={item.cached_file_url} width='350px' height='180px' />
+                <Image src={item.cached_file_url} width='350px' height='180px' alt={item.metadata.description} />
               </div>
               <div>
                 {item.metadata.name}

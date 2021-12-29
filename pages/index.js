@@ -45,9 +45,9 @@ if (error) {
     return (
       <div>
 
-        {photos.map(item => (
+        {photos.map((item, index) => (
           <div>
-            <a href={opensea_link+item.token_id} target="_blank">
+            <a href={opensea_link+item.token_id} key={index} target="_blank">
               <div>
                 <img src={item.cached_file_url} width='350px' height='180px' />
               </div>

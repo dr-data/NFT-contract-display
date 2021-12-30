@@ -45,8 +45,11 @@ if (error) {
             <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
               <div>
                 <Image src={item.cached_file_url} 
-                        width='350px' height='180px' 
-                        alt={item.metadata.description} 
+                        width='350px' 
+                        height='180px' 
+                        alt={item.metadata.description}
+                        loading="eager"
+                        layout="responsive" 
                         quality="2"
                         />
               </div>

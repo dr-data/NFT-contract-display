@@ -14,6 +14,8 @@
 
 
 import React, { useState, useEffect } from 'react';
+import NextLink from "next/link";
+import Router from "next/router";
 import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
@@ -57,7 +59,31 @@ if (error) {
   } else {
     return (
       
-      <div>
+      <Box>
+        <Flex margin="1rem" justifyContent="flex-end">
+          <NextLink href="/about" passHref>
+            <Link>About</Link>
+          </NextLink>
+        </Flex>
+        <Flex flexDirection="column" alignItems="center" margin="2rem">
+        <Link href="#">
+          <Heading as="h1" size="2xl" marginY="1rem">
+            NFT Collection of Lester Chong
+          </Heading>
+        </Link>
+        <Box width="xl">
+          <Divider />
+        </Box>
+        <Heading as="h2" size="lg" marginY="1rem">
+          from contract
+        </Heading>
+        <Button
+          variantColor="blue"
+          margin="3rem"
+          onClick={() => Router.push(`/user/${getRandomInt(40)}`)}
+        >
+          Check out a random user
+        </Button>
         {photos.map((item, index) => (
           <div key={index}>
             <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
@@ -75,7 +101,9 @@ if (error) {
             </a>
           </div>
         ))}
-      </div>
+      </Flex>
+        
+      </Box>
     );
   }
 }

@@ -1,5 +1,5 @@
 const NavBar = () => (
-    <div className="NavBar" style={navBarStyle}>
+    <div className="NavBar" >
       NAVBAR
     </div>
   );

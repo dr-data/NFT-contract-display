@@ -49,7 +49,7 @@ if (error) {
                         height='180px' 
                         alt={item.metadata.description}
                         layout="responsive" 
-                        quality="2"
+                        quality={2}
                         />
               </div>
               <div>

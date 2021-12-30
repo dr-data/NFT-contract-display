@@ -1,3 +1,5 @@
+//Listing the allowed domain for fetching images
+
 module.exports = {
   reactStrictMode: true,
   images: {

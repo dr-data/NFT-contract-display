@@ -1,3 +1,17 @@
+// need to add the UI
+// https://chakra-ui.com/guides/getting-started/nextjs-guide
+//
+// Sorting the json
+// According to the filename
+// https://stackoverflow.com/questions/47998188/how-to-sort-an-object-alphabetically-within-an-array-in-react-js/47998260
+// 
+// Adding two api
+// 1. fetch the metadata of the NFTs
+// 2. fetch the mint to address
+// https://egghead.io/lessons/react-fetch-data-from-an-api-on-the-server-side-with-getserversideprops-in-next-js
+//
+// putting the API KEY to the env
+
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 
@@ -37,7 +51,7 @@ if (error) {
     return <div>Loading...</div>;
   } else {
     return (
-      
+
       <div>
         {photos.map((item, index) => (
           <div key={index}>

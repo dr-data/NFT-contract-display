@@ -94,6 +94,7 @@ if (error) {
                         alt={item.metadata.description}
                         quality={2}
                         />
+                        
               </div>
               <div>
                 {item.metadata.name}

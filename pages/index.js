@@ -48,7 +48,6 @@ if (error) {
                         width='350px' 
                         height='180px' 
                         alt={item.metadata.description}
-                        layout="responsive" 
                         quality={2}
                         />
               </div>

@@ -18,6 +18,7 @@ import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
+
 export default function Home() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);

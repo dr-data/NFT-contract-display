@@ -47,7 +47,7 @@ if (error) {
                 <Image src={item.cached_file_url} 
                         width='350px' height='180px' 
                         alt={item.metadata.description} 
-                        quality="30"
+                        quality="2"
                         />
               </div>
               <div>

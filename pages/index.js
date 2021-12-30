@@ -12,8 +12,17 @@
 //
 // putting the API KEY to the env
 
+
+//https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
+
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image'
+import NextLink from "next/link";
+import Router from "next/router";
+import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
+
+import { Image } from "@chakra-ui/react";
+
+import { SimpleGrid } from '@chakra-ui/react'
 
 export default function Home() {
   const [error, setError] = useState(null);
@@ -23,7 +32,8 @@ export default function Home() {
   const contract_address = "0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707";
   
   const opensea_link = "https://opensea.io/assets/matic/"+contract_address+"/";
-  
+
+
   useEffect(() => {
     // fetch("https://api.nftport.xyz/v0/nfts/0xD4b3f1c0C67a493477F1eBc5d04c12eB4de168FE?chain=polygon&include=metadata", {
       fetch("https://api.nftport.xyz/v0/nfts/"+ contract_address +"?chain=polygon&include=metadata", {
@@ -52,20 +62,57 @@ if (error) {
   } else {
     return (
 
-      <div>
+    <Box>
+
+        <Flex margin="1rem" justifyContent="flex-end">
+          <NextLink href="/about" passHref>
+            <Link>About</Link>
+          </NextLink>
+        </Flex>
+        <Flex flexDirection="column" alignItems="center" margin="2rem">
+        <Link href="#">
+          <Heading as="h1" size="2xl" marginY="1rem">
+            NFT Collection of Lester Chong
+          </Heading>
+        </Link>
+        <Box width="xl">
+          <Divider />
+        </Box>
+        <Heading as="h2" size="lg" marginY="1rem">
+          from contract
+        </Heading>
+        <Button
+          variantColor="blue"
+          margin="3rem"
+          onClick={() => Router.push(`/user/${getRandomInt(40)}`)}
+        >
+          Check out a random user
+        </Button>
+        </Flex>
+
+        <Box>
+        <SimpleGrid minChildWidth='250px' spacing='10px'>
         {photos.map((item, index) => (
-          <div key={index}>
-            <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
-              <div>
-                <Image src={item.cached_file_url} width='350px' height='180px' alt={item.metadata.description} />
+              <div key={index}>
+                <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
+                  <div>
+                    <Image src={item.cached_file_url} 
+                            width='300px' 
+                            height='150px' 
+                            alt={item.metadata.description}
+                            quality={2}
+                            />
+                            
+                  </div>
+                  <div>
+                    {item.metadata.name}
+                  </div>
+                </a>
               </div>
-              <div>
-                {item.metadata.name}
-              </div>
-            </a>
-          </div>
-        ))}
-      </div>
+            ))}
+        </SimpleGrid>      
+      </Box>
+    </Box>
     );
   }
 }

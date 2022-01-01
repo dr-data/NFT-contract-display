@@ -25,6 +25,8 @@ import { Image } from "@chakra-ui/react";
 import { SimpleGrid } from '@chakra-ui/react';
 
 import Data from "./api/Data";
+import Random from "./api/Random";
+
 
 export default function Home() {
   
@@ -52,7 +54,8 @@ export default function Home() {
 
         </Flex>
         <Box m={[2, 55]} alignItems="center">
-          <Data contract_address="0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707"></Data>
+          <Data contract_address="0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707"/> 
+          <Random contract_address="0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707"/>
         </Box>
 
         

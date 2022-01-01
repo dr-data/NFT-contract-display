@@ -16,23 +16,27 @@
 //https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
 
 import React, { useState, useEffect } from 'react';
-import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
+import { Heading, Link, Flex, Box, Button, Divider, Center } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react'
 
-export default function Data() {
+export default function Data(prop) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [photos, setPhotos] = useState([]); 
 
-  const contract_address = "0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707";
+  
+  const contract_address = prop.contract_address;
   
   const opensea_link = "https://opensea.io/assets/matic/"+contract_address+"/";
 
+  const polygonscan = "https://polygonscan.com/address/"+contract_address+"/";
 
-  useEffect(() => {
+  const delay = (ms = 1000) => new Promise(r => setTimeout(r, ms));
+
+  useEffect((prop) => {
     // fetch("https://api.nftport.xyz/v0/nfts/0xD4b3f1c0C67a493477F1eBc5d04c12eB4de168FE?chain=polygon&include=metadata", {
       fetch("https://api.nftport.xyz/v0/nfts/"+ contract_address +"?chain=polygon&include=metadata", {
           "method": "GET",
@@ -58,7 +62,7 @@ export default function Data() {
           setError(error);
         }
       )
-  }, [])
+  }, [contract_address])
 if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
@@ -85,7 +89,13 @@ if (error) {
             </a>
             </div>
         ))}
-    </SimpleGrid>      
+    </SimpleGrid>
+    <Center>
+    Contract Address: 
+    <a href={polygonscan} target="_blank" rel="noreferrer">
+        {prop.contract_address}
+    </a>
+    </Center>      
 </Box>
 
     );

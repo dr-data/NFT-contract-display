@@ -16,26 +16,27 @@
 //https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
 
 import React, { useState, useEffect } from 'react';
-import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
+import { Heading, Link, Flex, Box, Button, Divider, Center } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react'
 
-export default function Random() {
+export default function Token_holder(prop) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [photos, setPhotos] = useState([]); 
-  const [random_photo, setRandom_photo] = useState([]);
+  const [addresses, setAddresses] = useState([]); 
+  const [holder_no, setHolder_no] = useState(0);
 
   const contract_address = "0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707";
   
   const opensea_link = "https://opensea.io/assets/matic/"+contract_address+"/";
 
+  const polygonscan = "https://polygonscan.com/address/"+contract_address+"/";
 
-  useEffect(() => {
+  useEffect((prop) => {
     // fetch("https://api.nftport.xyz/v0/nfts/0xD4b3f1c0C67a493477F1eBc5d04c12eB4de168FE?chain=polygon&include=metadata", {
-      fetch("https://api.nftport.xyz/v0/nfts/"+ contract_address +"?chain=polygon&include=metadata", {
+      fetch("https://api.covalenthq.com/v1/137/tokens/"+ contract_address +"/token_holders/\?key\=ckey_8f349c447389465d8c01232a2a9", {
           "method": "GET",
           "headers": {
             "Content-Type": "application/json",
@@ -45,19 +46,12 @@ export default function Random() {
       .then(res => res.json())
       .then(
         (data) => {
-          console.log(data.nfts);
-          const nfts = data.nfts;
-          const sortedResponse = nfts.sort(
-              (a, b) => (a.metadata.name > b.metadata.name) ? 1 : -1);
-          
-          console.log("SORTED:" + sortedResponse);
-            
-          const picked_nft = nfts[Math.floor(Math.random() * nfts.length)];
-          
-          console.log("PICKED:" + picked_nft);
+          console.log(data.data.items);
+          console.log(data.data.items.length);
 
+          setHolder_no(data.data.items.length);
           setIsLoaded(true);
-          setPhotos(data.nfts);
+          setAddresses(data.data.items);
         },
         (error) => {
           setIsLoaded(true);
@@ -72,26 +66,31 @@ if (error) {
   } else {
     return (
 <Box>
+    <Center>
+    Contract Address: 
+    <a href={polygonscan} target="_blank" rel="noreferrer">
+        {prop.contract_address}
+    </a>
+    </Center>    
+    <Center>
+        Total Holders: {holder_no}
+    </Center>  
     <SimpleGrid minChildWidth='250px' spacing='10px'>
-    {photos.map((item, index) => (
+    {addresses.map((item, index) => (
             <div key={index}>
-            <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
                 <div>
-                <Image src={item.cached_file_url} 
-                        width='300px' 
-                        height='150px' 
-                        alt={item.metadata.description}
-                        quality={2}
-                        />
                         
                 </div>
                 <div>
-                {item.metadata.name}
+                Holder Address: {item.address}
+                <br />
+                Holding Quantity: {item.balance}
                 </div>
-            </a>
+           
             </div>
         ))}
-    </SimpleGrid>      
+    </SimpleGrid>
+  
 </Box>
 
     );

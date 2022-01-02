@@ -1,13 +1,83 @@
+// need to add the UI
+// https://chakra-ui.com/guides/getting-started/nextjs-guide
+//
+// Sorting the json
+// According to the filename
+// https://stackoverflow.com/questions/47998188/how-to-sort-an-object-alphabetically-within-an-array-in-react-js/47998260
+// 
+// Adding two api
+// 1. fetch the metadata of the NFTs
+// 2. fetch the mint to address
+// https://egghead.io/lessons/react-fetch-data-from-an-api-on-the-server-side-with-getserversideprops-in-next-js
+//
+// putting the API KEY to the env
+
+
+//https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
+
+import React, { useState, useEffect } from 'react';
 import NextLink from "next/link";
-import { Heading, Link, Flex, Text, Stack, Box } from "@chakra-ui/react";
-import Data from '../api/Data'
+import Router from "next/router";
+import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
 
-const Contract_1 = () => {
-  return (
+import { Image } from "@chakra-ui/react";
+
+import { SimpleGrid } from '@chakra-ui/react';
+
+import Data from "../../pages/api/data";
+import Random from "../../pages/api/Random";
+import token_holder from "../../pages/api/Token_holder";
+
+
+export default function Contract_1() {
+
+    return (
+
     <Box>
-      <Data contract_address="0xCfa71823FEc407Ccb2EA64a8ff265B41fC2f7707"/> 
-    </Box>
-  );
-};
 
-export default Contract_1;
+        <Flex margin="1rem" justifyContent="flex-end">
+          <NextLink href="/holder_checker" passHref>
+            <Link>Holder Checker</Link> 
+          </NextLink>
+          
+          <NextLink href="/about" passHref>
+            <Link>About</Link>
+          </NextLink>
+        </Flex>
+        <Flex flexDirection="column" alignItems="center" margin="2rem">
+        <Link href="#">
+          <Heading as="h1" size="2xl" marginY="1rem">
+            NFT Collection of Lester Chong
+          </Heading>
+        </Link>
+        <Box width="xl">
+          <Divider />
+        </Box>
+        <Heading as="h2" size="lg" marginY="1rem">
+          from contract
+        </Heading>
+
+        <SimpleGrid>
+        <NextLink href="/contract_1" passHref>
+            <Link>Portal Gun MV BTS gif</Link> 
+          </NextLink>
+
+          <NextLink href="/contract_2" passHref>
+            <Link>Portal Gun MV gif</Link> 
+          </NextLink>
+
+          <NextLink href="/contract_3" passHref>
+            <Link>Portal Gun MV Picture</Link> 
+          </NextLink>
+        </SimpleGrid>
+
+        </Flex>
+        <Box m={[2, 55]} alignItems="center">
+          <Data contract_address="0x3698A20e61da8F09a8991ACDC66Fa967056B6154"/> 
+        </Box>
+
+        
+    </Box>
+    );
+  }
+

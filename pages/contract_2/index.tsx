@@ -24,12 +24,12 @@ import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react';
 
-import Data from "./api/Data";
-import Random from "./api/Random";
-import token_holder from "./api/Token_holder";
+import Data from "../api/data";
+import Random from "../api/Random";
+import token_holder from "../api/Token_holder";
 
 
-export default function Home() {
+export default function Contract_2() {
 
     return (
 
@@ -59,22 +59,21 @@ export default function Home() {
 
         <SimpleGrid>
         <NextLink href="/contract_1" passHref>
-            <Link>Holder Checker</Link> 
+            <Link>Portal Gun MV BTS gif</Link> 
           </NextLink>
 
           <NextLink href="/contract_2" passHref>
-            <Link>Holder Checker</Link> 
+            <Link>Portal Gun MV gif</Link> 
           </NextLink>
 
           <NextLink href="/contract_3" passHref>
-            <Link>Holder Checker</Link> 
+            <Link>Portal Gun MV Picture</Link> 
           </NextLink>
         </SimpleGrid>
 
         </Flex>
         <Box m={[2, 55]} alignItems="center">
-          <Data contract_address="0x3698A20e61da8F09a8991ACDC66Fa967056B6154"/> 
-        
+          <Data contract_address="0xcfa71823fec407ccb2ea64a8ff265b41fc2f7707"/> 
         </Box>
 
         

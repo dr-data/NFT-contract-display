@@ -27,6 +27,7 @@ import { SimpleGrid } from '@chakra-ui/react';
 import Data from "../api/data";
 import Random from "../api/Random";
 import token_holder from "../api/Token_holder";
+import Nav from "../../components/Nav";
 
 
 export default function Contract_3() {
@@ -57,19 +58,8 @@ export default function Contract_3() {
           from contract
         </Heading>
 
-        <SimpleGrid>
-        <NextLink href="/contract_1" passHref>
-            <Link>Portal Gun MV BTS gif</Link> 
-          </NextLink>
+        <Nav />
 
-          <NextLink href="/contract_2" passHref>
-            <Link>Portal Gun MV gif</Link> 
-          </NextLink>
-
-          <NextLink href="/contract_3" passHref>
-            <Link>Portal Gun MV Picture</Link> 
-          </NextLink>
-        </SimpleGrid>
 
         </Flex>
         <Box m={[2, 55]} alignItems="center">

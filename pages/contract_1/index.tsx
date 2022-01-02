@@ -20,7 +20,11 @@ import NextLink from "next/link";
 import Router from "next/router";
 import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
 
+import { Image } from "@chakra-ui/react";
 
+import { SimpleGrid } from '@chakra-ui/react';
+
+import Data from "../../pages/api/data";
 
 import Nav from "../../components/Nav";
 

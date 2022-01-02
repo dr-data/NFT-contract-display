@@ -28,6 +28,7 @@ import Data from "./api/Data";
 import Random from "./api/Random";
 import token_holder from "./api/Token_holder";
 
+import Nav from "../../components/Nav";
 
 export default function Home() {
 
@@ -57,19 +58,7 @@ export default function Home() {
           from contract
         </Heading>
 
-        <SimpleGrid>
-        <NextLink href="/contract_1" passHref>
-            <Link>Holder Checker</Link> 
-          </NextLink>
-
-          <NextLink href="/contract_2" passHref>
-            <Link>Holder Checker</Link> 
-          </NextLink>
-
-          <NextLink href="/contract_3" passHref>
-            <Link>Holder Checker</Link> 
-          </NextLink>
-        </SimpleGrid>
+        <Nav />
 
         </Flex>
         <Box m={[2, 55]} alignItems="center">

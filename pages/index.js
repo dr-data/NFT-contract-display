@@ -28,7 +28,7 @@ import Data from "./api/Data";
 import Random from "./api/Random";
 import token_holder from "./api/Token_holder";
 
-import Nav from "../../components/Nav";
+import Nav from "../components/Nav";
 
 export default function Home() {
 

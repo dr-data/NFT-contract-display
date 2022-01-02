@@ -20,13 +20,8 @@ import NextLink from "next/link";
 import Router from "next/router";
 import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
 
-import { Image } from "@chakra-ui/react";
 
-import { SimpleGrid } from '@chakra-ui/react';
 
-import Data from "../../pages/api/data";
-import Random from "../../pages/api/Random";
-import token_holder from "../../pages/api/Token_holder";
 import Nav from "../../components/Nav";
 
 export default function Contract_1() {

@@ -24,9 +24,7 @@ import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react';
 
-import Data from "../api/data";
-import Random from "../api/Random";
-import token_holder from "../api/Token_holder";
+
 import Nav from "../../components/Nav";
 
 

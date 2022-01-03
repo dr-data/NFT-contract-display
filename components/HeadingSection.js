@@ -8,15 +8,15 @@ import Nav from "../components/Nav";
 import NavBar from "../components/NavBar";
 
 //import image from folder
-import LCImage from "../image/LC.jpg";
+
 
 export default function HeadingSection() {
-    console.log(LCImage)
+    console.log("../image/LC.jpg")
     return (
         <div>
             <NavBar />
             
-            <Image src={LCImage} alt="" />
+            <Image src="/image/LC.jpg" alt="" />
 
             <Flex flexDirection="column" alignItems="center" margin="2rem">
             <Heading as="h1" size="2xl" marginY="1rem">

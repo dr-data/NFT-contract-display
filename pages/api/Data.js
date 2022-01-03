@@ -16,7 +16,7 @@
 //https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
 
 import React, { useState, useEffect } from 'react';
-import { Heading, Link, Flex, Box, Button, Divider, Center } from "@chakra-ui/react";
+import { Spinner,Heading, Link, Flex, Stack, Box, Button, Divider, Center } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
@@ -66,29 +66,36 @@ export default function Data(prop) {
 if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div><Spinner
+    thickness="4px"
+    speed="0.65s"
+    emptyColor="gray.200"
+    color="blue.500"
+    size="xl"
+  /> Loading ...</div>;
   } else {
     return (
 <Box>
-    <SimpleGrid minChildWidth='250px' spacing='10px'>
-    {photos.map((item, index) => (
-            <div key={index}>
-            <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
-                <div>
-                <Image src={item.cached_file_url} 
-                        width='300px' 
-                        height='150px' 
-                        alt={item.metadata.description}
-                        quality={2}
-                        />
-                        
-                </div>
-                <div>
-                {item.metadata.name}
-                </div>
-            </a>
-            </div>
-        ))}
+    <SimpleGrid minChildWidth='250px' spacing='10px' align="center">
+
+      {photos.map((item, index) => (
+              <div key={index}>
+              <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
+                  <div>
+                  <Image src={item.cached_file_url} 
+                          width='300px' 
+                          height='150px' 
+                          alt={item.metadata.description}
+                          quality={2}
+                          />
+                          
+                  </div>
+                  <div>
+                  {item.metadata.name}
+                  </div>
+              </a>
+              </div>
+          ))}
     </SimpleGrid>
     <Center>
     Contract Address: 

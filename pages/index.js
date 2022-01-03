@@ -37,31 +37,19 @@ import Nav from "../components/Nav";
 
 import NavBar from "../components/NavBar";
 
+import Footer from "../components/Footer";
+
+import HeadingSection from '../components/HeadingSection';
 
 export default function Home() {
     return (
-    <Box>
-        <NavBar />
-        <Flex flexDirection="column" alignItems="center" margin="2rem">
-          <Heading as="h1" size="2xl" marginY="1rem">
-            NFT Collection of Lester Chong
-          </Heading>
-        <Box width="xl">
-          <Divider />
-        </Box>
-        <Heading as="h2" size="lg" marginY="1rem">
-          from contract
-        </Heading>
-
-        <Nav />
-
-        </Flex>
+    <Box bg='#FFFBF6'>
+        <HeadingSection />
         <Box m={[2, 55]} alignItems="center">
           <Data contract_address="0x3698A20e61da8F09a8991ACDC66Fa967056B6154"/> 
-        
         </Box>
 
-        
+        <Footer />
     </Box>
     );
   }

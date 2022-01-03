@@ -15,6 +15,10 @@
 
 //https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
 
+//https://ithelp.ithome.com.tw/articles/10274751
+//https://cronoschimp.club/
+//https://www.bunnywarriors.io/home
+
 import React, { useState, useEffect } from 'react';
 import NextLink from "next/link";
 import Router from "next/router";

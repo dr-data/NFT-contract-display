@@ -18,6 +18,7 @@
 //https://ithelp.ithome.com.tw/articles/10274751
 //https://cronoschimp.club/
 //https://www.bunnywarriors.io/home
+//https://novalaunch.art/#about
 
 import React, { useState, useEffect } from 'react';
 import NextLink from "next/link";

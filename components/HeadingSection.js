@@ -16,7 +16,7 @@ export default function HeadingSection() {
         <div>
             <NavBar />
             
-            <Image src={LCImage} />
+            <Image src={LCImage} alt="" />
 
             <Flex flexDirection="column" alignItems="center" margin="2rem">
             <Heading as="h1" size="2xl" marginY="1rem">

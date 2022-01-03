@@ -30,27 +30,17 @@ import token_holder from "./api/Token_holder";
 
 import Nav from "../components/Nav";
 
+import NavBar from "../components/NavBar";
+
+
 export default function Home() {
-
     return (
-
     <Box>
-
-        <Flex margin="1rem" justifyContent="flex-end">
-          <NextLink href="/holder_checker" passHref>
-            <Link>Holder Checker</Link> 
-          </NextLink>
-          
-          <NextLink href="/about" passHref>
-            <Link>About</Link>
-          </NextLink>
-        </Flex>
+        <NavBar />
         <Flex flexDirection="column" alignItems="center" margin="2rem">
-        <Link href="#">
           <Heading as="h1" size="2xl" marginY="1rem">
             NFT Collection of Lester Chong
           </Heading>
-        </Link>
         <Box width="xl">
           <Divider />
         </Box>

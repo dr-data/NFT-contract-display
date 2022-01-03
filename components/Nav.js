@@ -2,19 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import NextLink from "next/link";
 import Router from "next/router";
-import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
+import { Heading, Link, Flex, Box, Divider } from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react';
 
+import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const Nav = () => (
   <div>
-        <SimpleGrid columns={3} spacing={10}>
+        <SimpleGrid columns={3} spacing={10} alignItems="center">
+          
+        <Button colorScheme='blue'>
           <NextLink href="/contract_1" passHref>
             <Link>Portal Gun MV BTS gif</Link> 
           </NextLink>
+        </Button>
 
           <NextLink href="/contract_2" passHref>
             <Link>Portal Gun MV gif</Link> 

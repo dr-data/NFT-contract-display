@@ -53,7 +53,7 @@ export default function embedded_1() {
             src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=0&relayUrl=https://api.defender.openzeppelin.com/autotasks/8c35b8bd-7865-4404-b9e2-26001e54346a/runs/webhook/771a7ae1-ce84-4975-b343-47f2de566a57/9vDZeN6r1RbkoTqDekTmYp"
             width="550px"
             height="450px"
-            frameborder="0"
+            frameBorder="0"
           />
         </Box>
         <Box m={[2, 55]} alignItems="center">
@@ -61,7 +61,7 @@ export default function embedded_1() {
             src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=1&relayUrl=https://api.defender.openzeppelin.com/autotasks/8c35b8bd-7865-4404-b9e2-26001e54346a/runs/webhook/771a7ae1-ce84-4975-b343-47f2de566a57/9vDZeN6r1RbkoTqDekTmYp"
             width="550px"
             height="450px"
-            frameborder="0"
+            frameBorder="0"
           />
         </Box>
         </SimpleGrid>

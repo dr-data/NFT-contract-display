@@ -21,7 +21,7 @@ export default function HeadingSection() {
             </Center>
 
             <Flex flexDirection="column" alignItems="center" margin="2rem">
-            <Heading as="h1" size="2xl" marginY="2rem">
+            <Heading as="h1" size="2xl" marginY="1.2rem">
                 Welcome to the NFT Collection of Lester Chong
             </Heading>
             <Box width="xl">

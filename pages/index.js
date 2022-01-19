@@ -48,7 +48,7 @@ export default function home() {
         <HeadingSection />
         <SimpleGrid minChildWidth='120px' columns={2} spacing={10}>
         <Box m={[2, 55]} alignItems="center">
-          <Iframe
+        <iframe
             src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=0"
             width="600px"
             height="600px"
@@ -57,7 +57,7 @@ export default function home() {
           />
         </Box>
         <Box m={[2, 55]} alignItems="center">
-        <Iframe
+        <iframe
             src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=1"
             width="600px"
             height="600px"

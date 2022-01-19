@@ -9,24 +9,24 @@ import NavBar from "../components/NavBar";
 
 //import image from folder
 
+
 export default function HeadingSection() {
     console.log("./image/LC.jpg")
     return (
         <div>
             <NavBar />
             
-            <Image src="/image/LC.jpg" alt="" />
-
+            <Box boxSize='sm'>
+              <Image src='../image/LesterChong.jpg' alt='' />
+            </Box>
             <Flex flexDirection="column" alignItems="center" margin="2rem">
-            <Heading as="h1" size="2xl" marginY="1rem">
+            <Heading as="h1" size="2xl" marginY="-1rem">
                 Welcome to the NFT Collection of Lester Chong
             </Heading>
             <Box width="xl">
                 <Divider sx={{ borderColor: '#DE00FF', borderBottomWidth: 8 }}/>
             </Box>
-            <Heading as="h2" size="lg" marginY="1rem">
-                from contract
-            </Heading>
+
             <Nav />
             </Flex>
         </div>

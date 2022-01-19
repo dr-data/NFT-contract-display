@@ -10,7 +10,7 @@ import NavBar from "../components/NavBar";
 //import image from folder
 
 export default function HeadingSection() {
-    console.log("../image/LC.jpg")
+    console.log("./image/LC.jpg")
     return (
         <div>
             <NavBar />

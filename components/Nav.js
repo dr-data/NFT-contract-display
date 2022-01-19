@@ -12,7 +12,7 @@ import { Button, ButtonGroup } from '@chakra-ui/react'
 
 const Nav = () => (
   <div>
-        <SimpleGrid columns={3} spacing={10} alignItems="center">
+        {/* <SimpleGrid columns={3} spacing={10} alignItems="center">
           
         <Button colorScheme='blue'>
           <NextLink href="/contract_1" passHref>
@@ -40,7 +40,7 @@ const Nav = () => (
             <Link>Portal Gun Song</Link> 
           </NextLink>
           
-        </SimpleGrid>
+        </SimpleGrid> */}
   </div>
 );
 

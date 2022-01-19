@@ -1,3 +1,4 @@
+
 // need to add the UI
 // https://chakra-ui.com/guides/getting-started/nextjs-guide
 //
@@ -15,6 +16,11 @@
 
 //https://raptis.wtf/blog/create-a-navbar-with-chakra-ui-react/
 
+//https://ithelp.ithome.com.tw/articles/10274751
+//https://cronoschimp.club/
+//https://www.bunnywarriors.io/home
+//https://novalaunch.art/#about
+
 import React, { useState, useEffect } from 'react';
 import NextLink from "next/link";
 import Router from "next/router";
@@ -24,58 +30,47 @@ import { Image } from "@chakra-ui/react";
 
 import { SimpleGrid } from '@chakra-ui/react';
 
+import { Grid, GridItem } from '@chakra-ui/react'
+
 import Iframe from 'react-iframe'
-
-
-import Data from "../api/Data";
 
 import Nav from "../../components/Nav";
 
+import NavBar from "../../components/NavBar";
+
+import Footer from "../../components/Footer";
+
+import HeadingSection from "../../components/HeadingSection";
 
 export default function embedded_1() {
-
     return (
+    <Box bg='#FFFBF6'>
+        <HeadingSection />
 
-    <Box>
-
-        <Flex margin="1rem" justifyContent="flex-end">
-          <NextLink href="/holder_checker" passHref>
-            <Link>Holder Checker</Link> 
-          </NextLink>
-          
-          <NextLink href="/about" passHref>
-            <Link>About</Link>
-          </NextLink>
-        </Flex>
-        <Flex flexDirection="column" alignItems="center" margin="2rem">
-        <Link href="#">
-          <Heading as="h1" size="2xl" marginY="1rem">
-            NFT Collection of Lester Chong
-          </Heading>
-        </Link>
-        <Box width="xl">
-          <Divider />
-        </Box>
-        <Heading as="h2" size="lg" marginY="1rem">
-          from contract
-        </Heading>
-
-        <Nav />
-
-
-        </Flex>
-        <Flex>
-            <Box m={[3, 100]} alignItems="center">
-            <Iframe   src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0xD70B975CD8a47fe8a8B077Af71111851071758e7&chainId=80001&tokenId=0"
-            width="600px"
-            height="600px"
-            id="myId"
-            style="max-width:100%;"
+        <SimpleGrid columns={2} spacing={10}>
+        <Box m={[2, 55]} alignItems="center">
+          <iframe
+            src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=0&relayUrl=https://api.defender.openzeppelin.com/autotasks/8c35b8bd-7865-4404-b9e2-26001e54346a/runs/webhook/771a7ae1-ce84-4975-b343-47f2de566a57/9vDZeN6r1RbkoTqDekTmYp"
+            width="550px"
+            height="450px"
             frameborder="0"
-            position="relative"
-            />
-            </Box>
-        </Flex>
+          />
+        </Box>
+        <Box m={[2, 55]} alignItems="center">
+        <iframe
+            src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=1&relayUrl=https://api.defender.openzeppelin.com/autotasks/8c35b8bd-7865-4404-b9e2-26001e54346a/runs/webhook/771a7ae1-ce84-4975-b343-47f2de566a57/9vDZeN6r1RbkoTqDekTmYp"
+            width="550px"
+            height="450px"
+            frameborder="0"
+          />
+        </Box>
+        </SimpleGrid>
+
+
+       
+
+
+        <Footer />
     </Box>
     );
   }

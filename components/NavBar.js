@@ -68,14 +68,14 @@ const NavBar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <Stack spacing={4} direction="row" align="center">
-            <Button
+ {/*            <Button
               variant="outline"
               _hover={{ bg: "teal.700", borderColor: "teal.700" }}
             >
             <NextLink href="/holder_checker" passHref>
               <Link>Holder Checker</Link> 
             </NextLink>
-            </Button>
+            </Button> */}
 
             <Button
               variant="outline"

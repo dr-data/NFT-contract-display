@@ -42,7 +42,7 @@ import Footer from "../components/Footer";
 
 import HeadingSection from "../components/HeadingSection";
 
-export default function embedded_1() {
+export default function home() {
     return (
     <Box bg='#FFFBF6'>
         <HeadingSection />

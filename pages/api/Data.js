@@ -81,7 +81,7 @@ if (error) {
       {photos.map((item, index) => (
               <div key={index}>
               <a href={opensea_link+item.token_id} target="_blank" rel="noreferrer">
-                  <div>
+                  <div>                
                   <Image src={item.cached_file_url} 
                           width='300px' 
                           height='150px' 

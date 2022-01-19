@@ -35,6 +35,10 @@ const Nav = () => (
           <NextLink href="/contract_5" passHref>
             <Link>Portal Gun Animatic MV</Link> 
           </NextLink>
+
+          <NextLink href="/embedded_1" passHref>
+            <Link>Portal Gun Song</Link> 
+          </NextLink>
           
         </SimpleGrid>
   </div>

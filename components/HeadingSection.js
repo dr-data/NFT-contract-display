@@ -17,7 +17,7 @@ export default function HeadingSection() {
             <NavBar />
             
             <Box boxSize='sm'>
-              <Image src='../image/LesterChong.jpg' alt='' />
+              <Image src='https://raw.githubusercontent.com/dr-data/NFT-contract-display/main/image/LesterChong.png?token=GHSAT0AAAAAABOH5ZPKZLJGLRTD7GNHYS7AYPQ6IMA' alt='' />
             </Box>
             <Flex flexDirection="column" alignItems="center" margin="2rem">
             <Heading as="h1" size="2xl" marginY="-1rem">

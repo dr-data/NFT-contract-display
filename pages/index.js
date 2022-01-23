@@ -34,6 +34,8 @@ import { Grid, GridItem } from '@chakra-ui/react'
 
 import Iframe from 'react-iframe'
 
+import Faq from 'react-faq-component';
+
 import Nav from "../components/Nav";
 
 import NavBar from "../components/NavBar";
@@ -42,11 +44,50 @@ import Footer from "../components/Footer";
 
 import HeadingSection from "../components/HeadingSection";
 
+const data = {
+  title: "FAQ (How it works)",
+  rows: [
+    {
+      title: "Lorem ipsum dolor sit amet,",
+      content: "Lorem ipsum dolor sit amet, consectetur "
+    },
+    {
+      title: "Nunc maximus, magna at ultricies elementum",
+      content: "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
+    },
+    {
+      title: "Curabitur laoreet, mauris vel blandit fringilla",
+      content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
+    },
+    {
+      title: "What is the package version",
+      content: "v1.0.5"
+    }]
+}
+
+
 export default function home() {
     return (
+
+
+
     <Box bg='#FFFBF6'>
         <HeadingSection />
-        <SimpleGrid minChildWidth='120px' columns={2} spacing={10}>
+        <div>
+          <Faq data={data}
+              styles={{
+                titleTextColor: "green",
+                rowTitleColor: "mediumseagreen"
+                rowContentColor: "grey"
+
+            }} 
+            config={{
+                arrowIcon: "V",
+            }}
+          />
+        </div>
+
+        {/* <SimpleGrid minChildWidth='120px' columns={2} spacing={10}>
         <Box m={[2, 55]} alignItems="center">
         <Iframe
             src="https://cloudflare-ipfs.com/ipfs/bafybeib6q6q2a4ibiwfq657suynze7r4a3kyh6cuhvkga2sc4gjez2rz2y?contract=0x5B1c5EfcC3ce4BD862cb5c892712be146857358F&chainId=137&tokenId=0"
@@ -64,7 +105,7 @@ export default function home() {
           />
 
         </Box>
-        </SimpleGrid>
+        </SimpleGrid> */}
 
 
        

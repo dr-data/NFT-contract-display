@@ -77,7 +77,7 @@ export default function home() {
           <Faq data={data}
               styles={{
                 titleTextColor: "green",
-                rowTitleColor: "mediumseagreen"
+                rowTitleColor: "mediumseagreen",
                 rowContentColor: "grey"
 
             }} 

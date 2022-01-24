@@ -20,10 +20,12 @@ export default function Intro() {
           >
             甚麼是地獄要塞?
           </Heading>
-          <Box>
+          <Box m={{ base: 8, md: 45, lg: 30 }}>
             <Text
               color="white"
-              m={3}
+              m={{ base: 3, md: 8, lg: 20 }}
+              ml={{ base: 3, md: 8, lg: 40 }}
+              mr={{ base: 3, md: 8, lg: 40 }}
               pb={10}
               fontSize={{ base: "18px", md: "18px", lg: "22px" }}
             >

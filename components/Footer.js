@@ -10,30 +10,30 @@ import NextLink from "next/link";
 export default function Footer(prop) {
   return (
     <Center>
-      <HStack>
-        <NextLink href="#" passHref>
-          <Link>
+      <HStack spacing={10}>
+        <Link>
+          <a href="https://discord.gg/wMyWTFWb" target="_blank">
             <Icon as={SiDiscord} w={8} h={8} />
-          </Link>
-        </NextLink>
-        <NextLink href="https://www.instagram.com/lester.zz/" passHref>
-          <Link>
+          </a>
+        </Link>
+        <Link>
+          <a href="https://www.instagram.com/lester.zz/" target="_blank">
             <Icon as={SiInstagram} w={8} h={8} />
-          </Link>
-        </NextLink>
-        <NextLink href="https://www.facebook.com/lesterchongzz" passHref>
-          <Link>
+          </a>
+        </Link>
+        <Link>
+          <a href="https://www.facebook.com/lesterchongzz" target="_blank">
             <Icon as={SiFacebook} w={8} h={8} />
-          </Link>
-        </NextLink>
-        <NextLink
-          href="https://www.youtube.com/channel/UC_kt2Ui0RQCmWZlq2OW0v6w"
-          passHref
-        >
-          <Link>
+          </a>
+        </Link>
+        <Link>
+          <a
+            href="https://www.youtube.com/channel/UC_kt2Ui0RQCmWZlq2OW0v6w"
+            target="_blank"
+          >
             <Icon as={SiYoutube} w={8} h={8} />
-          </Link>
-        </NextLink>
+          </a>
+        </Link>
       </HStack>
     </Center>
   );

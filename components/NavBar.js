@@ -36,8 +36,12 @@ const NavBar = (props) => {
       color="white"
       {...props}
     >
-      <Box bg="#DE00FF" w={{ base: "30px", md: "40px", lg: "50px" }}>
-        <Image src="/static/LesterChong.png" alt="" />
+      {/*<Box bg="#DE00FF" w={{ base: "15%", md: "10%", lg: "8%" }}>
+        <Image src="/static/Lester_chong_name.png" alt="" />
+      </Box>
+  */}
+      <Box bg="#DE00FF" w={{ base: "40%", md: "30%", lg: "20%" }} ml={2}>
+        <Image src="/static/Chong_zing_name.png" alt="" />
       </Box>
 
       <Flex align="center" mr={5}>
@@ -57,11 +61,7 @@ const NavBar = (props) => {
         alignItems="center"
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
-      >
-        <a href="https://chongzing.com/collections/all" target="_blank">
-          Shop
-        </a>
-      </Stack>
+      ></Stack>
 
       <Box
         display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -81,9 +81,14 @@ const NavBar = (props) => {
             variant="outline"
             _hover={{ bg: "teal.700", borderColor: "teal.700" }}
           >
+            <a href="https://chongzing.com/collections/all" target="_blank">
+              Shop
+            </a>
+            {/*
             <NextLink href="/about" passHref>
               <Link>About</Link>
             </NextLink>
+            */}
           </Button>
         </Stack>
       </Box>

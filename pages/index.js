@@ -27,10 +27,16 @@ import {
   Link,
   Flex,
   Box,
+  Text,
   Button,
   Divider,
-  Stack
+  Stack,
+  Icon,
+  HStack,
+  VStack
 } from "@chakra-ui/react";
+
+import { SiDiscord } from "react-icons/si";
 
 import { Image } from "@chakra-ui/react";
 
@@ -62,21 +68,61 @@ export default function home() {
       <HeadingSection />
       <Intro />
 
-      <Box bg="" m={20} alignItems="center">
-        <Stack direction="row" spacing={4}>
-          <Button
-            leftIcon={<MdBuild />}
-            colorScheme="pink"
-            variant="solid"
-            size="lg"
-          >
-            Settings
-          </Button>
-          <Button rightIcon={<MdCall />} colorScheme="blue" variant="outline">
-            Call us
-          </Button>
-        </Stack>
-      </Box>
+      <VStack>
+        <Box width="xl">
+          <Divider sx={{ borderColor: "#DE00FF", borderBottomWidth: 3 }} />
+        </Box>
+
+        <br />
+        <br />
+        <Box w={{ base: "30%", md: "30%", lg: "45%" }} ml={2}>
+          <Image src="/static/1.jpeg" alt="" />
+        </Box>
+
+        <br />
+
+        <Box bg="" m={20} textAlign="center">
+          <a href="https://discord.gg/wMyWTFWb" target="_blank">
+            <Box
+              as="button"
+              height="80px"
+              width={{ base: "350px", md: "250px", lg: "400px" }}
+              lineHeight="1.2"
+              transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+              border="4px"
+              px="8px"
+              borderRadius="8px"
+              fontSize={{ base: "20px", md: "30px", lg: "40px" }}
+              fontWeight="semibold"
+              bg="#DE00FF"
+              borderColor="#DE00FF"
+              color="white"
+              _hover={{ bg: "#ebedf0" }}
+              _active={{
+                bg: "#dddfe2",
+                transform: "scale(0.98)",
+                borderColor: "#bec3c9"
+              }}
+              _focus={{
+                boxShadow:
+                  "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)"
+              }}
+            >
+              <HStack spacing="10px" align="center">
+                <Icon
+                  as={SiDiscord}
+                  m={{ base: 6, md: 4, lg: 6 }}
+                  boxSize={{ base: 8, md: 10, lg: 10 }}
+                />
+                <Text fontSize={{ base: "35px", md: "30px", lg: "43px" }}>
+                  加入 Discord
+                </Text>
+              </HStack>
+            </Box>
+          </a>
+        </Box>
+      </VStack>
+      <br />
 
       <FAQ />
 

@@ -29,10 +29,15 @@ const data = {
 export default function home() {
   return (
     <div>
-      <Box bg="" m={20}>
+      <Box bg="#1A1C2A" m={{ base: 30, md: 40, lg: 40 }}>
+        <Box>
+          <Divider sx={{ borderColor: "#DE00FF", borderBottomWidth: 3 }} />
+        </Box>
+
         <Heading as="h2" marginY="1.2rem" textAlign="center" color="#DE00FF">
           常見問題
         </Heading>
+
         <Faq
           data={data}
           styles={{

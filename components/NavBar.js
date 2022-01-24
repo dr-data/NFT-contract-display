@@ -81,7 +81,11 @@ const NavBar = (props) => {
             variant="outline"
             _hover={{ bg: "teal.700", borderColor: "teal.700" }}
           >
-            <a href="https://chongzing.com/collections/all" target="_blank">
+            <a
+              href="https://chongzing.com/collections/all"
+              target="_blank"
+              rel="noreferrer"
+            >
               Shop
             </a>
             {/*

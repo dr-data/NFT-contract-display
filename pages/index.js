@@ -82,7 +82,11 @@ export default function home() {
         <br />
 
         <Box bg="" m={20} textAlign="center">
-          <a href="https://discord.gg/wMyWTFWb" target="_blank">
+          <a
+            href="https://discord.gg/wMyWTFWb"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Box
               as="button"
               height="80px"

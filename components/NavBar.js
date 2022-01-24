@@ -13,6 +13,7 @@ import { HamburgerIcon } from "@chakra-ui/icons";
 
 import NextLink from "next/link";
 
+import { Image } from "@chakra-ui/react";
 
 // Note: This code could be better,
 // so I'd recommend you to understand how I solved and you could write yours better :)
@@ -35,15 +36,18 @@ const NavBar = (props) => {
       color="white"
       {...props}
     >
+      <Box bg="#DE00FF" w={{ base: "30px", md: "40px", lg: "50px" }}>
+        <Image src="/static/LesterChong.png" alt="" />
+      </Box>
+
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-        {/* Lester Chong's NFT */}
+          {/* Lester Chong's NFT */}
         </Heading>
       </Flex>
 
       <Box display={{ base: "block", md: "none" }} onClick={handleToggle}>
         <HamburgerIcon />
-        
       </Box>
 
       <Stack
@@ -54,21 +58,17 @@ const NavBar = (props) => {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <NextLink href="/" passHref>
-          <Link>Home</Link>
-        </NextLink>
-        <NextLink href="https://chongzing.com/collections/all" passHref>
-          <Link>Shop</Link>
-        </NextLink>
+        <a href="https://chongzing.com/collections/all" target="_blank">
+          Shop
+        </a>
       </Stack>
 
-
-        <Box
-          display={{ base: isOpen ? "block" : "none", md: "block" }}
-          mt={{ base: 4, md: 0 }}
-        >
-          <Stack spacing={4} direction="row" align="center">
- {/*            <Button
+      <Box
+        display={{ base: isOpen ? "block" : "none", md: "block" }}
+        mt={{ base: 4, md: 0 }}
+      >
+        <Stack spacing={4} direction="row" align="center">
+          {/*            <Button
               variant="outline"
               _hover={{ bg: "teal.700", borderColor: "teal.700" }}
             >
@@ -77,20 +77,18 @@ const NavBar = (props) => {
             </NextLink>
             </Button> */}
 
-            <Button
-              variant="outline"
-              _hover={{ bg: "teal.700", borderColor: "teal.700" }}
-            >
+          <Button
+            variant="outline"
+            _hover={{ bg: "teal.700", borderColor: "teal.700" }}
+          >
             <NextLink href="/about" passHref>
               <Link>About</Link>
             </NextLink>
-            </Button>
-          </Stack>              
-        </Box>
-
+          </Button>
+        </Stack>
+      </Box>
     </Flex>
   );
 };
 
 export default NavBar;
-

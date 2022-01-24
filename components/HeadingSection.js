@@ -19,7 +19,13 @@ export default function HeadingSection() {
       </Center>
 
       <Flex flexDirection="column" alignItems="center" margin="2rem">
-        <Heading as="h1" size="4xl" marginY="1.2rem" textAlign="center">
+        <Heading
+          as="h1"
+          size="4xl"
+          marginY="1.2rem"
+          textAlign="center"
+          color="#DE00FF"
+        >
           進入地獄要塞 <br /> Into the “Zanctuary”
         </Heading>
         <Box width="xl">

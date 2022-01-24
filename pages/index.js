@@ -22,7 +22,15 @@
 import React, { useState, useEffect } from "react";
 import NextLink from "next/link";
 import Router from "next/router";
-import { Heading, Link, Flex, Box, Button, Divider } from "@chakra-ui/react";
+import {
+  Heading,
+  Link,
+  Flex,
+  Box,
+  Button,
+  Divider,
+  Stack
+} from "@chakra-ui/react";
 
 import { Image } from "@chakra-ui/react";
 
@@ -36,7 +44,11 @@ import Faq from "react-faq-component";
 
 import Nav from "../components/Nav";
 
+import FAQ from "../components/FAQ";
+
 import NavBar from "../components/NavBar";
+
+import { MdBuild, MdCall } from "react-icons/md";
 
 import Footer from "../components/Footer";
 
@@ -44,48 +56,29 @@ import HeadingSection from "../components/HeadingSection";
 
 import Intro from "../components/Intro";
 
-const data = {
-  title: "FAQ (How it works)",
-  rows: [
-    {
-      title: "Lorem ipsum dolor sit amet,",
-      content: "Lorem ipsum dolor sit amet, consectetur "
-    },
-    {
-      title: "Nunc maximus, magna at ultricies elementum",
-      content:
-        "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
-    },
-    {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
-      content:
-        "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
-    },
-    {
-      title: "What is the package version",
-      content: "v1.0.5"
-    }
-  ]
-};
-
 export default function home() {
   return (
-    <Box bg="#FFFBF6">
+    <Box bg="#1A1C2A">
       <HeadingSection />
       <Intro />
-      <div>
-        <Faq
-          data={data}
-          styles={{
-            titleTextColor: "green",
-            rowTitleColor: "mediumseagreen",
-            rowContentColor: "grey"
-          }}
-          config={{
-            arrowIcon: "V"
-          }}
-        />
-      </div>
+
+      <Box bg="" m={20} alignItems="center">
+        <Stack direction="row" spacing={4}>
+          <Button
+            leftIcon={<MdBuild />}
+            colorScheme="pink"
+            variant="solid"
+            size="lg"
+          >
+            Settings
+          </Button>
+          <Button rightIcon={<MdCall />} colorScheme="blue" variant="outline">
+            Call us
+          </Button>
+        </Stack>
+      </Box>
+
+      <FAQ />
 
       {/* <SimpleGrid minChildWidth='120px' columns={2} spacing={10}>
         <Box m={[2, 55]} alignItems="center">
@@ -106,8 +99,9 @@ export default function home() {
 
         </Box>
         </SimpleGrid> */}
-
-      <Footer />
+      <Box bg="#DE00FF" p={8}>
+        <Footer />
+      </Box>
     </Box>
   );
 }

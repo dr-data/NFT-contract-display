@@ -42,6 +42,8 @@ import Footer from "../components/Footer";
 
 import HeadingSection from "../components/HeadingSection";
 
+import Intro from "../components/Intro";
+
 const data = {
   title: "FAQ (How it works)",
   rows: [
@@ -70,6 +72,7 @@ export default function home() {
   return (
     <Box bg="#FFFBF6">
       <HeadingSection />
+      <Intro />
       <div>
         <Faq
           data={data}

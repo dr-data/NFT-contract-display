@@ -6,22 +6,27 @@ const data = {
   title: "",
   rows: [
     {
-      title: "Lorem ipsum dolor sit amet,",
-      content: "Lorem ipsum dolor sit amet, consectetur "
+      title: "《傳送槍》的NFT 在哪一個blockchain鑄造？",
+      content: "在Polygon Network上，並可以在opensea搜尋到!"
     },
     {
-      title: "Nunc maximus, magna at ultricies elementum",
+      title: "《傳送槍》的NFT是甚麼？",
       content:
-        "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
+        "《傳送槍》的NFT是與動畫導演Nic合作製作的動畫MV分別以全首及不同部份的剪輯製作而成，莊正希望可以將這個動畫與大家分享，一起擁有!"
     },
     {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
+      title: "如何購買莊正的NFT？",
       content:
-        "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
+        "是次NFT的首輪發售經已完結，後續請留意Discord及Instagram的最新資訊！你亦可於Discord發表意見！會有各種活動及不同售賣方式繼續供大家購買！"
     },
     {
-      title: "What is the package version",
-      content: "v1.0.5"
+      title: "是次NFT有多少種類？",
+      content:
+        "共6種，包括：《傳送槍》全MV、MV Animatic、MV 黑白x彩色gif、MV 彩色gif、MV定格、單曲MP3。"
+    },
+    {
+      title: "如有問題可以如何查詢？",
+      content: "可以於Discord查詢，或電郵至flowingmoment.c@gmail.com。"
     }
   ]
 };
